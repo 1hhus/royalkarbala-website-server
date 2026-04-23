@@ -1,0 +1,21 @@
+.loading {
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loading .loader-container {
+    width: 50dvw;
+    height: 100px;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.loading .loader-container h4 {
+    font-family: brand;
+    font-weight: 100;
+    font-size: calc(var(--title)/1.5);
+}

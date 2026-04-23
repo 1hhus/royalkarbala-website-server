@@ -1,0 +1,27 @@
+# Dependencies
+client/node_modules
+server/node_modules
+
+# Build artifacts
+client/build
+
+# Uploaded/generated images
+server/public/imgs
+
+# Environment files
+.env
+.env.*
+client/.env
+client/.env.*
+server/.env
+server/.env.*
+
+# Sensitive deployment/runtime files
+deployment/cloudflared/root-cloudflared
+deployment/cloudflared/etc-cloudflared
+deployment/pm2/dump.pm2
+server/Release.key
+
+# Misc
+*.log
+.DS_Store
