@@ -1,0 +1,60 @@
+
+.card-container {
+    cursor: pointer;
+}
+.card-container .image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 1px solid #D3B384;
+}
+
+.card-container .image button {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    padding: 1rem 3rem;
+    background: var(--bg);
+    border: 1px solid var(--bg-dark);
+    height: fit-content;
+    width: fit-content;
+    cursor: pointer;
+    transform: translateY(400%);
+    font-family: main-semibold;
+}
+.card-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .7s ease;
+    aspect-ratio: 1 / 1;
+    vertical-align: middle;
+}
+.card-container:hover img {
+    filter: brightness(60%);
+}
+.card-container figcaption {
+    padding: 1rem 0;
+}
+.card-container figcaption h2 {
+    /* margin: 1rem 0; */
+    font-family: main-semibold;
+    font-weight: 100;
+    text-transform: capitalize;
+    font-size: calc(var(--title) * .5);
+    /* height: var(--title); */
+}
+.card-container figcaption p {
+    margin-top: .35rem;
+    font-size: calc(var(--paragraph) * 1.5);
+    font-family: brand;
+}
+.card-container.en figcaption p {
+    font-size: calc(var(--paragraph) * 1);
+    font-family: main-regular;
+}
+.card-container figcaption p span {
+    opacity: .5;
+}
+
