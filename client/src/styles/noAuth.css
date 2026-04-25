@@ -1,0 +1,7 @@
+.no-auth {
+    min-height: 60dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+}

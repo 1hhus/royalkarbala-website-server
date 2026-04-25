@@ -1,0 +1,131 @@
+
+form label {
+    font-size: var(--paragraph);
+    display: block;
+}
+form :is(input,textarea) {
+    width: 100%;
+    padding: 1rem;
+    font-size: var(--paragraph);
+    border: 1px solid var(--bg-dark);
+    border-radius: 2px;
+    outline: none;
+    filter: brightness(70%);
+    background-color: transparent;
+    margin: .4rem 0;
+}
+form textarea {
+    resize: vertical;
+    max-height: 300px;
+    min-height: 150px;
+}
+form button {
+    padding: 1rem 2rem;
+    background: var(--primary-dark);
+    color: var(--bg);
+    border: none;
+    outline: none;
+    font-family: main-regular;
+    transition: .4s ease;
+}
+form button .btn-wrapper {
+    font-size: var(--paragraph);
+    height: calc(var(--paragraph) * 1.5);
+    overflow: hidden;
+}
+form button .btn-wrapper div{
+    transition: .4s ease;
+}
+form button:hover {
+    background: var(--primary);
+}
+form button:hover .btn-wrapper div{
+    transform: translateY(-100%);
+}
+.form-page .errors-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+form .names-row {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: .5rem;
+}
+form .relatived {
+    position: relative;
+    cursor: pointer;
+}
+form .relatived .icon{
+    position: absolute;
+    bottom: 0;
+    top: 1.6rem;
+    right: 1rem;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    transition: .4s ease;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+form .relatived .dropdown {
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+    right: 0;
+    padding-top: 5rem;
+    width: 100%;
+    z-index: 10;
+}
+form .relatived .dropdown.active {
+    pointer-events: all;
+}
+form .relatived .dropdown.active ul {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+form .relatived .dropdown ul {
+    background: var(--bg);
+    border: 1px solid var(--bg-dark);
+    padding: 1.5rem;
+
+    list-style: none;    
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: .4s ease;
+}
+form .relatived .dropdown ul li {
+    padding: .4rem 0;
+    cursor: pointer;
+    transition: .4s ease;
+}
+form .relatived .dropdown ul li:hover {
+    color: var(--primary);
+}
+form .relatived input {
+    padding-right: 3rem;
+}
+form .checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    width: fit-content;
+    margin: 1rem 0;
+}
+form .checkbox-container .checkbox {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+@media (max-width:600px){
+    form button {
+        padding: .8rem 1.2rem;
+    }
+}

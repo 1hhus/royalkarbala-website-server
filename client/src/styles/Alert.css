@@ -1,0 +1,48 @@
+.alert-container {
+    position: fixed;
+    inset: 0;
+    z-index: 150;
+    padding:3rem 1rem;
+    margin: auto;
+    width: fit-content;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: .4s ease;
+    pointer-events: none;
+    height: fit-content;
+    background: var(--bg);
+    border-radius: 1px solid var(--bg-dark);
+}
+.alert-container.active {
+    pointer-events: all;
+    transform: translateY(0);
+    opacity: 1;
+}
+.alert-container h2 {
+    font-size: calc(var(--title) * .8);
+    color: var(--primary);
+}
+.alert-container p {
+    margin: .4rem 0;
+}
+.alert-container .btns-container {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-top: 1rem;
+}
+.alert-container button {
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-family: main-regular;
+}
+.alert-container button.do {
+    color: var(--bg);
+    background-color: rgb(170, 40, 40);
+}
+.alert-container button.dont {
+    color: var(--primary-dark);
+    background-color: #c15a0516;
+}
