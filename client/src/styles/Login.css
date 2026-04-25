@@ -1,0 +1,54 @@
+.login {
+    min-height: 100dvh;
+    display: flex;
+    z-index: 0;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: var(--bg-dark);
+    
+}
+.login .pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    pointer-events: none;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+    opacity: .1;
+}
+.login:after {
+    width: 100%;
+    pointer-events: none;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    background: radial-gradient(circle at center, transparent,var(--bg));
+    left: 0;
+    content: '';
+}
+.login .container {
+    width: 50%;
+    margin: auto;
+}
+.login .container h1 {
+    text-align: center;
+    font-family: brand;
+    font-weight: 100;
+    font-size: var(--title);
+    background: linear-gradient(to right, var(--primary), var(--primary-dark));
+    width: fit-content;
+    margin: auto;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (max-width:768px){
+.login .container {
+    width: 90%;
+}
+}

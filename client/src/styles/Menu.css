@@ -1,0 +1,127 @@
+#menu {
+    background: #f6dfbf;
+    position: relative;
+    padding-top: 7rem;
+    min-height: 160dvh;
+}
+#menu:after {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    background: radial-gradient(circle at center, transparent 20%, var(--bg) 80%);
+    z-index: -1;
+    content: '';
+}
+#menu .pattern-img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .25;
+    z-index: -1
+}
+#menu .filters {
+    margin-top: 2rem;
+    padding-right: var(--space);
+    position: relative;
+    z-index: 0;
+}
+#menu .filters .navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: calc(100% - 2.5rem * 2);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: auto 2.5rem;
+    pointer-events: none;
+    justify-content: space-between;
+    z-index: 100;
+}
+#menu .filters .navigation .arrow-container {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: all;
+    color: var(--primary);
+}
+#menu .filters .navigation .arrow-container:hover {
+    color: var(--primary-dark);
+}
+#menu .filters .hover {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgba(145, 73, 0, 0.048);
+    display: block;
+    height: 100%;
+}
+#menu .filters .button {
+    font-size: var(--paragraph);
+    transition: .4s ease color;
+    text-align: center;
+    cursor: pointer;;
+    padding: 1.2rem .2rem;
+}
+#menu .filters .button.active {
+    color: var(--primary);
+}
+#menu .filters .button:not(.active){
+    opacity: .7;
+}
+
+#menu .dishes-section .container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    #menu .dishes-section .container {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media only screen and (max-width: 767px) {
+    #menu .dishes-section .container {
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+    }
+    #menu .filters .navigation {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: calc(100% - .5rem * 2);
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin: auto .5rem;
+        pointer-events: none;
+        justify-content: space-between;
+        z-index: 100;
+    }
+}
+
+.category-section {
+    margin: 5rem 0;
+}
+
+.category-section h1 {
+    margin-right: var(--space);
+}
+.en .category-section h1  {
+    margin-right: initial;
+    margin-left: var(--space);
+}

@@ -1,0 +1,142 @@
+.card-model {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    width: 50dvw;
+    max-height: 90dvh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.166);
+    background-color: var(--bg);
+    display: grid;
+    grid-template-columns: .6fr .4fr;
+    z-index: 999 !important;
+    transform: translateY(150%);
+}
+
+.card-model.active {
+    transform: translateY(0);
+}
+
+.card-model::after {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle at bottom right, transparent 10%, var(--bg) 50%);
+    content: '';
+    z-index: -1;
+}
+
+.card-model .image {
+    width: 100%;
+    align-self: start;
+}
+
+.card-model .image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    vertical-align: middle;
+}
+
+.card-model .card-model-body {
+    padding: 1rem;
+    align-self: start;
+}
+
+.card-model .card-model-body .close-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    background-color: var(--bg-dark);
+    cursor: pointer;
+    font-size: calc(var(--paragraph) * 1.5);
+    color: var(--primary-dark);
+}
+
+.card-model .card-model-body .dish-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: brand;
+    gap: 1rem;
+}
+
+.card-model .card-model-body .dish-name :is(h1, h3) {
+    font-weight: 100 !important;
+}
+
+.card-model .card-model-body .dish-name h1 {
+    font-size: var(--title);
+}
+
+.card-model .card-model-body .dish-name h3 {
+    font-size: calc(var(--title) * .7);
+    background: linear-gradient(to right, var(--primary-dark), var(--primary));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: .8;
+    white-space: nowrap;
+}
+
+.card-model .card-model-body .paragraph-container {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.089);
+}
+
+.card-model .card-model-body .paragraph-container p {
+    opacity: .8;
+    margin: 0;
+    line-height: 1.8;
+}
+
+.card-model .pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: .3;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .card-model {
+        display: flex;
+        flex-direction: column;
+        width: 70dvw;
+        max-height: 90dvh;
+    }
+
+    .card-model .card-model-body {
+        padding: 1rem 1rem 2rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .card-model {
+        display: flex;
+        flex-direction: column;
+        width: 90dvw;
+        max-height: 90dvh;
+    }
+
+    .card-model .card-model-body {
+        padding: 1rem 1rem 2rem 1rem;
+    }
+
+    .card-model .card-model-body .dish-name {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
