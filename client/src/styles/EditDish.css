@@ -1,0 +1,13 @@
+.edit-dish-container .image-preview {
+    width: 250px;
+    margin: auto;
+    height: 250px;
+}
+.edit-dish-container .image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid var(--primary);
+    padding: .5rem;
+    vertical-align: middle;
+}

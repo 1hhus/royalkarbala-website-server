@@ -1,0 +1,120 @@
+footer {
+    z-index: 0;
+    /*  */
+    border-top: 1px solid var(--primary);
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    justify-content: space-around;
+    z-index: 0;
+    padding: 3rem 0;
+}
+footer .container .col h2 {
+    font-family: brand;
+    font-weight: 100;
+    font-size: var(--title);
+}
+footer .container .col ul {
+    list-style-type: none;
+}
+footer .container .col ul li {
+    margin: .75rem 0;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+footer .container .col ul li::before {
+    width: 5px;
+    height: 5px;
+    display: block;
+    background-color: var(--primary);
+    content: '';
+    border-radius: 50%;
+}
+footer .container .col ul li a {
+    text-decoration: none;
+    color: var(--font);
+    /* z-index: -1; */
+    /* opacity: .8; */
+}
+footer .container .col ul li:hover a {
+    opacity: 1;
+}
+footer .container .logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer .container .logo {
+    width: 110px;
+    display: flex;
+    justify-content: center;
+    margin: .5rem 0;
+}
+footer .container .logo img {
+    width: 100%;
+}
+footer .container .stars {
+    display: flex;
+    justify-content: center;
+    gap: .3rem;
+    color: var(--primary-dark);
+}
+footer .image-container {
+    
+    overflow: hidden;
+    height: 50dvh;
+}
+footer .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+    transform: scale(1.2) translateY(-1.7rem);
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: brightness(50%);
+}
+footer .image-container button {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem 2rem;
+    border: none;
+    outline: none;
+    font-family: main-regular;
+    font-size: var(--paragraph);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.284);
+    gap: 1rem;
+    color: var(--accent-dark);
+}
+footer .image-container button .wrapper {
+    height: calc(var(--paragraph) * 1.7);
+    overflow: hidden;
+}
+footer .image-container button .wrapper div {
+    transition: .4s ease;
+}
+footer .image-container button:hover .wrapper div {
+    transform: translateY(-100%);
+}
+footer .image-container button .icon {
+    transition: .7s ease;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer .image-container button:hover .icon {
+    transform: rotate(230deg);
+}

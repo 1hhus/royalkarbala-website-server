@@ -1,0 +1,159 @@
+.all-dishes .filters {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    padding-right: var(--space);
+    position: relative;
+    width: 60dvw;
+    z-index: 0;
+}
+.all-dishes .filters .navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: calc(100% - 2.5rem * 2);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: auto 2.5rem;
+    pointer-events: none;
+    justify-content: space-between;
+    z-index: 100;
+}
+.all-dishes .filters .navigation .arrow-container {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: all;
+    color: var(--primary);
+}
+.all-dishes .filters .navigation .arrow-container:hover {
+    color: var(--primary-dark);
+}
+.all-dishes .filters .hover {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgba(145, 73, 0, 0.048);
+    display: block;
+    height: 100%;
+}
+.all-dishes .filters .button {
+    font-size: var(--paragraph);
+    transition: .4s ease color;
+    text-align: center;
+    cursor: pointer;;
+    padding: 1.2rem .2rem;
+}
+.all-dishes .filters .button.active {
+    color: var(--primary);
+    background: var(--bg-dark);
+}
+.all-dishes .filters .button:not(.active){
+    opacity: .7;
+}
+.all-dishes .dishes-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.all-dishes .dishes-container .dish.dragging {
+    opacity: .5 !important;
+}
+.all-dishes .dishes-container .dish {
+    display: grid;
+    margin: 1rem 0;
+    grid-template-columns: 30% 65%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: var(--bg);
+}
+.all-dishes .dishes-container .dish .img {
+    height: 300px;
+    position: relative;
+    vertical-align: middle;
+}
+.all-dishes .dishes-container .dish .img .hidden-state-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.618);
+    pointer-events: none;
+    display: flex;
+    justify-content: end;
+}
+.all-dishes .dishes-container .dish .edit-btn-container button {
+    width: 100%;
+    background: transparent;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    justify-content: center;
+}
+.all-dishes .dishes-container .dish .edit-btn-container button:hover {
+    background: var(--bg-dark);
+}
+.all-dishes .dishes-container .dish .img .hidden-state-container .hidden-icon {
+    margin: 1rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    background: var(--bg);
+}
+.all-dishes .dishes-container .dish .dish-body {
+    background-color: var(--bg);
+    background-color: var(--bg);
+    margin-top: 0;
+}
+.all-dishes .dishes-container .dish .main-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0;
+}
+.all-dishes .dishes-container .dish .main-info h1 {
+    color: var(--primary);
+    font-size: calc(var(--title)/2);
+}
+.all-dishes .dishes-container .dish .paragraph {
+    margin: .3rem 0;
+}
+.all-dishes .dishes-container .dish .btns-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: .5rem;
+}
+.all-dishes .dishes-container .dish .btns-container .hide-dish {
+    background: var(--bg-dark);
+    color: var(--primary);
+}
+.all-dishes .dishes-container .dish button {
+    padding: 1rem 1.2rem;
+    background: var(--primary);
+    transition: .4s ease;
+    color: var(--bg);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: .5rem;
+    font-family: main-regular;
+}
+.all-dishes .dishes-container .dish button:hover {
+    background: var(--primary-dark);
+}
+.all-dishes .dishes-container .dish img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}

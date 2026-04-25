@@ -1,0 +1,36 @@
+.default-image-page {
+  width: 100%;
+}
+
+.default-image-page h1 {
+  font-family: main-bold;
+  font-size: calc(var(--title) * .7);
+  margin-bottom: 2rem;
+}
+
+.default-image-preview {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1;
+  border: 1px solid var(--bg-dark);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.default-image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.empty-default-image {
+  font-family: main-regular;
+  font-size: var(--paragraph);
+  opacity: .7;
+  text-align: center;
+  padding: 1rem;
+}

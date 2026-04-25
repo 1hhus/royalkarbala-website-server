@@ -1,0 +1,136 @@
+:root {
+  --bg:#FBF0E1;
+  --bg-dark:#F7E6CC;
+  --font:hsl(0, 0%, 3%);
+  --primary:#C15B05;
+  --primary-dark:#5B2B02;
+  --accent:#D7AF52;
+  --accent-dark:#775A33;
+  --space:4rem;
+  --paragraph:1rem;
+  --title:3rem;
+}
+
+@font-face {
+  font-family: main-regular;
+  src: url('./assets/fonts/IBM\ arabic/IBMPlexSansArabic-Regular.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: main-semibold;
+  src: url('./assets/fonts/IBM\ arabic/IBMPlexSansArabic-SemiBold.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: main-bold;
+  src: url('./assets/fonts/IBM\ arabic/IBMPlexSansArabic-Bold.ttf');
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: brand;
+  src: url('./assets/fonts/brand/33-B-Fantezy.ttf');
+  font-display: swap;
+}
+@font-face {
+  font-family: english;
+  src: url('./assets/fonts/english/LibreCaslonDisplay-Regular.ttf');
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box !important;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: var(--bg);
+  color: var(--font);
+  margin: 0;
+  padding: 0;
+  font-family: main-regular;
+  font-size: var(--paragraph);
+  box-sizing: border-box;
+}
+
+.App.en {
+  direction: ltr;
+}
+.App.en *{
+  font-family: english;
+}
+.container {
+  margin: 0 var(--space);
+}
+input,textarea {
+  font-family: main-regular;
+}
+.App.en :is(input,textarea) {
+  font-family: english;
+}
+.brand-title {
+  font-family: brand;
+  font-size: var(--title);
+  font-weight: 100;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.blur-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  z-index: 998;
+  background-color:#e9b66f44;
+  display: block;
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  pointer-events: none;
+  transition: .4s ease;
+}
+.blur-layer.active {
+  pointer-events: all;
+  opacity: 1;
+}
+a {
+  text-transform: none;
+}
+p.message {
+  text-align: center;
+  margin: 2rem 0;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  :root {
+    --paragraph:1.2rem
+  }
+}
+@media only screen and (max-width: 767px) {
+  :root {
+      --space:1rem
+  }
+}
+
+.shadow {
+  width: 100dvw;
+  height: 100dvh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--primary-dark);
+  opacity: 0;
+  pointer-events: none;
+  filter: brightness(40%);
+  transition: .4s;
+  z-index: 200;
+  display: block;
+}
+.shadow.active {
+  opacity: .8;
+  pointer-events: all;
+}
